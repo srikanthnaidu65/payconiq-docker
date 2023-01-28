@@ -1,7 +1,4 @@
-FROM maven:3.8.5-openjdk-17
-
-WORKDIR /payconiq-docker
-COPY . .
-RUN mvn clean install
-
-CMD mvn spring-boot:run
+FROM openjdk:17-jdk-slim
+LABEL maintainer="srikanth.naidu65@gmail.com"
+COPY target/payconiq-stock-1.0.0-RELEASE.jar payconiq-stock.jar
+ENTRYPOINT ["java", "-jar", "/payconiq-stock.jar"]

@@ -1,7 +1,13 @@
 # Payconiq Assignment - Docker Compose Spring Boot and MySQL
 
-## Run the System
-We can easily run the whole with only a single command:
+## Build the project
+Run the following command to build the project
+```bash
+mvn clean install
+```
+
+## Run the Spring boot app and MySQL images
+Run the Spring boot app and MySQL images with only a single command:
 ```bash
 docker-compose up
 ```
